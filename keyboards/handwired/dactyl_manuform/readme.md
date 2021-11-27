@@ -53,6 +53,15 @@ Keymap of Loligagger from geekhack.
 #### Default
 Simple QWERTY layout with 3 Layers.
 
+### [Keymaps 7x6](/keyboards/handwired/dactyl_manuform/7x6/keymaps/)
+
+#### Default
+Simple QWERTY layout with 3 Layers, similar to 6x6.
+ - A copy of 6x6 with simpler matrix wiring.
+ - Blackpill (STM32F401) instead of AVR.
+ - Split keyboard byerial full duplex wiring.
+ - Handness by split hand-pin (usb connector can be attached to left or right side).
+
 ## Required Hardware
 
 Apart from diodes and key switches for the keyboard matrix in each half, you
