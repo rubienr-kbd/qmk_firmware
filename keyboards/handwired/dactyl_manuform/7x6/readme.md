@@ -27,15 +27,18 @@ The 7x6 is a copy of the 6x6 layout with a few differencies:
   This keys are not aligned in a straight line.
   The remaining two (thumb) keys are counted to be in the seventh row.
   The matrix is as follows:
-         C0 C1 C2 C3 C4 C5        C0 C1 C2 C3 C4 C5
-    R0   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R1   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R2   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R3   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R4   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R5   .. .. .. .. .. ..        .. .. .. .. .. ..
-    R6               .. ..        .. ..
+  ```
+       C0 C1 C2 C3 C4 C5        C0 C1 C2 C3 C4 C5
+      R0   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R1   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R2   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R3   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R4   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R5   .. .. .. .. .. ..        .. .. .. .. .. ..
+      R6               .. ..        .. ..
+  ```
   * the Blackpill pins are:
+    ```
                 LEFT                     RIGHT
          B1 B0 A7 A6 A5 A4         B1 B0 A7 A6 A5 A4
     A3   .. .. .. .. .. ..         .. .. .. .. .. ..
@@ -45,7 +48,9 @@ The 7x6 is a copy of the 6x6 layout with a few differencies:
     C15  .. .. .. .. .. ..         .. .. .. .. .. ..
     C14  .. .. .. .. .. ..         .. .. .. .. .. ..
     C13              .. ..         .. ..
-  * the physical layout is rather:  
+    ```
+  * the physical layout is rather:
+    ```
          .. .. .. .. .. ..         .. .. .. .. .. ..
          .. .. .. .. .. ..         .. .. .. .. .. ..
          .. .. .. .. .. ..         .. .. .. .. .. ..
@@ -55,3 +60,4 @@ The 7x6 is a copy of the 6x6 layout with a few differencies:
                      .. ..         .. ..
                         .. ..   .. ..
                         .. ..   .. ..  
+     ```
