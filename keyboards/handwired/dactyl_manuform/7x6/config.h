@@ -55,34 +55,50 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SERIAL_USART_RX_PAL_MODE 7  // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 
 // boot options: define KC_ESC and KC_F12 as boot-magic buttons
-#define BOOTMAGIC_LITE_ROW          0 // see LAYOUT_7x6 in 7x6.h
+#define BOOTMAGIC_LITE_ROW          4 // see LAYOUT_7x6 in 7x6.h
 #define BOOTMAGIC_LITE_COLUMN       0
-#define BOOTMAGIC_LITE_ROW_RIGHT    7 // see LAYOUT_7x6 in 7x6.h
+#define BOOTMAGIC_LITE_ROW_RIGHT   11 // see LAYOUT_7x6 in 7x6.h
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 5
 
 // i2c-oled setup
-#define OLED_BRIGHTNESS 128
 #define I2C_DRIVER I2CD1
 #define I2C1_SCL_PIN B6
 #define I2C1_SDA_PIN B7
 #define I2C1_SCL_PAL_MODE 4
 #define I2C1_SDA_PAL_MODE 4
 #define OLED_DISPLAY_ADDRESS 0x3c
+#define OLED_TIMEOUT 0
+#define OLED_BRIGHTNESS 32
 
 // audio setup
-// #define AUDIO_PIN A8
-// #define AUDIO_PWM_DRIVER PWMD1
-// #define AUDIO_PWM_CHANNEL 1
-// #define AUDIO_STATE_TIMER GPTD4
-// #define AUDIO_PWM_PAL_MODE 1
-// #define AUDIO_CLICKY
+#define AUDIO_PIN A8
+#define AUDIO_PWM_DRIVER PWMD1
+#define AUDIO_PWM_CHANNEL 1
+#define AUDIO_STATE_TIMER GPTD4
+#define AUDIO_PWM_PAL_MODE 1
+#define AUDIO_ENABLE_TONE_MULTIPLEXING
+#define AUDIO_TONE_MULTIPLEXING_RATE_DEFAULT 10
+#define AUDIO_CLICKY
+#define AUDIO_CLICKY_FREQ_RANDOMNESS 0.02f
+#define AUDIO_CLICKY_FREQ_MIN      9600
+#define AUDIO_CLICKY_FREQ_DEFAULT  9800
+#define AUDIO_CLICKY_FREQ_MAX      9999
 
 // rgb setup
-// #define RGB_DI_PIN B2
-// #define RGBLED_NUM 2
-// #define RGBLED_SPLIT { 2, 2}
-// #define RGBLIGHT_SPLIT
-// #define RGBLIGHT_LIMIT_VAL 180
-// #define RGBLIGHT_MODE_RAINBOW_MOOD 1
-// #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD
-// #define RGBLIGHT_SLEEP
+#define RGB_DI_PIN B2
+#define RGBLED_NUM 12
+#define RGBLED_SPLIT { 6, 6 }
+#define RGBLIGHT_LIMIT_VAL 200
+#define RGBLIGHT_SPLIT
+#define RGBLIGHT_SLEEP
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
+#define RGBLIGHT_DEFAULT_HUE 170
+#define RGBLIGHT_DEFAULT_SAT 255
+#define RGBLIGHT_DEFAULT_VAL 100
+#define RGBLIGHT_HUE_STEP      4
+#define RGBLIGHT_SAT_STEP      8
+#define RGBLIGHT_VAL_STEP     16
+
+// terminal and debug
+#define TERMINAL_HELP
