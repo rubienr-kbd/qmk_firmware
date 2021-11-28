@@ -92,7 +92,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SPLIT
 #define RGBLIGHT_SLEEP
 #define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
 #define RGBLIGHT_DEFAULT_HUE 170
 #define RGBLIGHT_DEFAULT_SAT 255
 #define RGBLIGHT_DEFAULT_VAL 100
@@ -102,3 +102,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // terminal and debug
 #define TERMINAL_HELP
+
+// for DE umlaute
+#define TAPPING_TERM 200

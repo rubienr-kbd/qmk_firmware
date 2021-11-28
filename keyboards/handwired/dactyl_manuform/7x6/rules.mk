@@ -18,8 +18,8 @@ EXTRAKEY_ENABLE = no          # audio control and system control
 
 # terminal and debug
 TERMINAL_ENABLE = yes         # command-line-like interface thorugh a text ditor
-CONSOLE_ENABLE = no           # console for debug - qmk console -l
-COMMAND_ENABLE = no           # commands for debug and configuration (formerly known as Magic)
+CONSOLE_ENABLE  = yes         # console for debug - qmk console -l
+COMMAND_ENABLE  = yes         # commands for debug and configuration (formerly known as Magic)
 
 # Do not enable SLEEP_LED_ENABLE. It uses the same timer as BACKLIGHT_ENABLE.
 SLEEP_LED_ENABLE = no         # Breathing sleep LED during USB suspend
@@ -32,3 +32,6 @@ RGBLIGHT_DRIVER = WS2812
 
 AUDIO_ENABLE = yes            # audio output
 AUDIO_DRIVER = pwm_hardware
+
+# for DE umlaute
+TAP_DANCE_ENABLE = yes
