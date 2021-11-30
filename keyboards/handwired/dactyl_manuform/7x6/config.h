@@ -55,10 +55,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SERIAL_USART_RX_PAL_MODE 7  // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 
 // boot options: define KC_ESC and KC_F12 as boot-magic buttons
-#define BOOTMAGIC_LITE_ROW          4 // see LAYOUT_7x6 in 7x6.h
-#define BOOTMAGIC_LITE_COLUMN       0
-#define BOOTMAGIC_LITE_ROW_RIGHT   11 // see LAYOUT_7x6 in 7x6.h
-#define BOOTMAGIC_LITE_COLUMN_RIGHT 5
+#define BOOTMAGIC_LITE_ROW          0 // see LAYOUT_7x6 in 7x6.h
+#define BOOTMAGIC_LITE_COLUMN       5
+#define BOOTMAGIC_LITE_ROW_RIGHT    7 // see LAYOUT_7x6 in 7x6.h
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 0
 
 // i2c-oled setup
 #define I2C_DRIVER I2CD1
