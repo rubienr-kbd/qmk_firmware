@@ -4,11 +4,11 @@
 MCU = STM32F401
 
 # bootloader selection
-BOOTLOADER = stm32-dfu
+BOOTLOADER       = stm32-dfu
 BOOTMAGIC_ENABLE = lite       # enable Bootmagic Lite
 
 SPLIT_KEYBOARD = yes
-SERIAL_DRIVER = usart
+SERIAL_DRIVER  = usart
 
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306         # for SSD1306 or SH1106
@@ -19,7 +19,7 @@ EXTRAKEY_ENABLE = no          # audio control and system control
 # terminal and debug
 TERMINAL_ENABLE = yes         # command-line-like interface thorugh a text ditor
 CONSOLE_ENABLE  = yes         # console for debug - qmk console -l
-COMMAND_ENABLE  = yes         # commands for debug and configuration (formerly known as Magic)
+COMMAND_ENABLE  = no          # commands for debug and configuration (formerly known as Magic)
 
 # Do not enable SLEEP_LED_ENABLE. It uses the same timer as BACKLIGHT_ENABLE.
 SLEEP_LED_ENABLE = no         # Breathing sleep LED during USB suspend
@@ -33,5 +33,11 @@ RGBLIGHT_DRIVER = WS2812
 AUDIO_ENABLE = yes            # audio output
 AUDIO_DRIVER = pwm_hardware
 
-# for DE umlaute
-TAP_DANCE_ENABLE = yes
+# for umlaut and caps lock
+TAP_DANCE_ENABLE = yes        # cl
+COMBO_ENABLE     = yes        # umlaut
+
+# unicode and special characters. only one at the same time: UNICODE, UNICODEMAP, UCIS
+#UNICODE_ENABLE    = no        # https://docs.qmk.fm/#/feature_unicode?id=basic-unicode
+#UNICODEMAP_ENABLE = no        # https://docs.qmk.fm/#/feature_unicode?id=unicode-map
+UCIS_ENABLE       = yes       # https://docs.qmk.fm/#/feature_unicode?id=ucis

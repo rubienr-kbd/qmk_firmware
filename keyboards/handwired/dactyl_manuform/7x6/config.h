@@ -105,3 +105,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // for DE umlaute
 #define TAPPING_TERM 200
+
+// unicode and special characters. only one at the same time: UNICODE, UNICODEMAP, UCIS
+#define UCIS_MAX_CODE_POINTS 10
+#define UNICODE_SELECTED_MODES UC_LNX
