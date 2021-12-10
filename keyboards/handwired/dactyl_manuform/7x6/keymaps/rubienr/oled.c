@@ -4,30 +4,29 @@
 
 static void render_master_status(void) {
     // layer info
-    oled_write_P(PSTR("L:"), false);
+    
     static char rgb_buffer[10];
 
     switch (get_highest_layer(layer_state)) {
         case _QWERTY:
-            oled_write_P(PSTR("QWE"), false);
+        case _TG_1:
+            oled_write_P(PSTR("L:QWE"), false);
             break;
-        case _R_MO:
-            oled_write_P(PSTR("RMO"), false);
-            break;
-        case _L_MO:
-            oled_write_P(PSTR("LMO"), false);
+        case _MO_1:
+            oled_write_P(PSTR("L"), true);
+            oled_write_P(PSTR(":MO "), false);
             break;
         default:
-            oled_write_P(PSTR("nil"), false);
+            oled_write_P(PSTR("L:nil"), false);
     }
     
     // kbd LED states
     led_t led_state = host_keyboard_led_state();
     oled_write_P(PSTR("N"), led_state.num_lock);
-    oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR("C"), led_state.caps_lock);
-    oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR("S"), led_state.scroll_lock);
+    oled_write_P(PSTR("A"), audio_is_on());
+    oled_write_P(PSTR(" "), false);
 
     // RGB info
     sprintf(rgb_buffer, PSTR("RGB%02d"), rgblight_get_mode());
@@ -40,6 +39,21 @@ static void render_master_status(void) {
     oled_write(rgb_buffer, false);
     sprintf(rgb_buffer, PSTR("s %3d"), rgblight_get_speed());
     oled_write(rgb_buffer, false);
+    oled_write_ln(PSTR(""), false);
+
+    oled_write_P(PSTR("M:"), false);
+    switch (get_highest_layer(layer_state)) {
+        case _QWERTY:
+            oled_write_P(PSTR("<^>"), false);
+            break;
+        case _TG_1:
+            oled_write_P(PSTR("PGE"), false);
+            break;
+        default:
+            oled_write_P(PSTR("nil"), false);
+    }
+
+        
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
