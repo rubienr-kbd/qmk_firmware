@@ -109,3 +109,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // unicode and special characters. only one at the same time: UNICODE, UNICODEMAP, UCIS
 #define UCIS_MAX_CODE_POINTS 10
 #define UNICODE_SELECTED_MODES UC_LNX
+
+// sandclock settings
+#define SCLK_MARKER_DELAY_SECONDS (OLED_DISPLAY_HEIGHT + 1)              // display a marker every n seconds
+#define SCLK_CLOCK_CYCLE_SECONDS  (60 * 60)         // restart clock every n seconds
+#define SPLIT_TRANSACTION_IDS_USER USER_SYNC_SCLK   // sync clock to split slave RPC ID
+#define SCLK_CLOCK_MANUAL_INCREMENT (60 * 2)        // steps on manual adjustment - increment / decrement; should be lower than the cycle
+#define SCLK_CYCLE_OVER_SONG AG_SWAP_SOUND

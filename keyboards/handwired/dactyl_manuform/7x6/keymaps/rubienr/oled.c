@@ -1,4 +1,4 @@
-#include "sandclock.c"
+#include "snakeclock.c"
 
 #ifdef OLED_ENABLE
 
@@ -58,15 +58,16 @@ static void render_master_status(void) {
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     rotation = OLED_ROTATION_270;
-    last_timer = timer_read();
+    _clk_state.last_timer = timer_read();
     return rotation;
 }
 
 void oled_task_user(void) {
-    if (is_keyboard_master()) render_master_status();
-    else {
+    if (is_keyboard_master()) {
+        render_master_status();
+    } else {
 #ifdef OLED_ENABLE
-      render_sandclock();
+      render_snakeclock();
 #endif
     }
 }

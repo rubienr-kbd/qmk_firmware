@@ -10,8 +10,8 @@
 #define TG_1 TG(_TG_1)
 
 #include "init.c"
-#include "oled.c"
 #include "input.c"
+#include "oled.c"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {                            
     [_QWERTY] = LAYOUT_7x6(                                                               
@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     _______ , _______ ,    KC_PGDN , KC_END
     ),
     [_MO_1] = LAYOUT_7x6(                                                                 
-        TERM_OFF, TERM_ON , XXXXXXX , XXXXXXX , XXXXXXX , RESET   ,                                            _______ , KC_PSCR , KC_SLCK , KC_PAUS , _______ , KC_F12  ,
-        DEBUG   , XXXXXXX , RGB_SPD , RGB_SPI , XXXXXXX , XXXXXXX ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
-        _______ , XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
+        TERM_OFF, TERM_ON , XXXXXXX , XXXXXXX , XXXXXXX , CK_TIMI ,                                            _______ , KC_PSCR , KC_SLCK , KC_PAUS , _______ , KC_F12  ,
+        DEBUG   , XXXXXXX , RGB_SPD , RGB_SPI , XXXXXXX , CK_TIMR ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
+        _______ , XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , CK_TIMD ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
         _______ , AU_TOG  , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
         _______ , RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , XXXXXXX ,                                            _______ , _______ , _______ , _______ , _______ , _______ ,
                             RGB_RMOD, RGB_MOD ,                                                                                    _______ , _______ ,
