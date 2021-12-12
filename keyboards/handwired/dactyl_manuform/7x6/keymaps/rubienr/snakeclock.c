@@ -154,7 +154,7 @@ static void _compute_next_snakeclock_state(snakeclock_state_t* state, bool incre
 static void _render_next_snakeclock_display(const snakeclock_state_t *state) {
     static char counter_buffer[6] = {0};
 
-    oled_write_pixel(state->x, state->y, state->cpx_value);
+    oled_write_pixel(state->x - 1, state->y - 1, state->cpx_value);
 
     uint8_t h = (state->elapsed_seconds / 3600) %10;
     uint8_t m = (state->elapsed_seconds - h * 3600) / 60;
@@ -219,6 +219,9 @@ static void _advance_snakeclock(bool forward, uint16_t offset_seconds) {
             _compute_next_snakeclock_state(&_clk_state, true);
             if (_clk_state.clock_direction_changed)  oled_write_pixel(_clk_state.prev_x, _clk_state.prev_y, (_clk_state.prev_cpx_value == 1) ? 0 : 1);
             _render_next_snakeclock_display(&_clk_state);
+#ifdef AUDIO_ENABLE
+            if (_clk_state.cycle_ovfl == 1)  PLAY_SONG(cycle_over_song);
+#endif
             offset_seconds--;
     }
     else { // rewind clock
